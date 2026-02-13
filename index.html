@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dump Exile | Ultimate Stream</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        body {
+            background: radial-gradient(circle at 30% 30%, #0a0f1e, #03050a);
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+        }
+        
+        .splash-container {
+            text-align: center;
+            animation: fadeScale 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        .logo-wrapper {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 25px;
+            background: rgba(20, 30, 50, 0.7);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-radius: 40px;
+            border: 2px solid rgba(255, 75, 75, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 70px rgba(255, 50, 50, 0.3);
+            animation: floatLogo 4s infinite ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo-wrapper::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 50% 50%, rgba(255,100,100,0.2) 0%, transparent 70%);
+            animation: rotate 10s linear infinite;
+        }
+        
+        .logo-wrapper img {
+            width: 120px;
+            height: 120px;
+            border-radius: 30px;
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transform: scale(0.9);
+            animation: breathe 3s infinite alternate;
+        }
+        
+        h1 {
+            color: white;
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(255, 75, 75, 0.6);
+            letter-spacing: 6px;
+            background: linear-gradient(135deg, #fff, #ff9999);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .tagline {
+            color: rgba(255, 120, 120, 0.9);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+        }
+        
+        .loader-grid {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin: 45px 0 25px;
+        }
+        
+        .loader-dot {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #ff4b4b;
+            animation: pulse 1.4s infinite;
+            box-shadow: 0 0 20px #ff4b4b;
+        }
+        
+        .loader-dot:nth-child(2) {
+            background: #ff6b6b;
+            animation-delay: 0.2s;
+            box-shadow: 0 0 20px #ff6b6b;
+        }
+        
+        .loader-dot:nth-child(3) {
+            background: #ff8e8e;
+            animation-delay: 0.4s;
+            box-shadow: 0 0 20px #ff8e8e;
+        }
+        
+        .copyright {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 14px;
+            margin-top: 60px;
+            letter-spacing: 2px;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(0.7); opacity: 0.6; }
+            50% { transform: scale(1.3); opacity: 1; }
+        }
+        
+        @keyframes floatLogo {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        @keyframes breathe {
+            0% { transform: scale(0.9); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes fadeScale {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 768px) {
+            .logo-wrapper {
+                width: 140px;
+                height: 140px;
+            }
+            .logo-wrapper img {
+                width: 100px;
+                height: 100px;
+            }
+            h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="splash-container">
+        <div class="logo-wrapper">
+            <img src="https://iili.io/q9UdkVs.jpg" alt="Dump Exile">
+        </div>
+        <h1>DUMP EXILE</h1>
+        <div class="tagline">ULTIMATE STREAM</div>
+        <div class="loader-grid">
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+        </div>
+        <div class="copyright">© 2026-2028 000-binary | Premium Free HD-STREAMZ</div>
+    </div>
+    
+    <script>
+        // 6 second splash screen - exact timing
+        setTimeout(() => {
+            window.location.href = 'dashboard.html';
+        }, 6000);
+    </script>
+</body>
+</html>
